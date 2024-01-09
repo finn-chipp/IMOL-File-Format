@@ -81,7 +81,7 @@ enum igre_imol_error igre_load_imol(char *fileName, struct igre_model_listing *m
 		}
 
 		if(!(fread(modelListing->models[i].name, sizeof(uint8_t), modelListing->models[i].name_size, f) && // Load its name from the file
-			 fread(modelListing->models[i].polygons, sizeof(struct igre_polygon), modelListing->models[i].no_polygons, f) == modelListing->models[i].no_polygons)) { // Load its polygons from the file
+		     fread(modelListing->models[i].polygons, sizeof(struct igre_polygon), modelListing->models[i].no_polygons, f) == modelListing->models[i].no_polygons)) { // Load its polygons from the file
 			fclose(f);
 			return IGRE_FILE_READ_ERROR;
 		}
@@ -106,7 +106,7 @@ enum igre_imol_error igre_store_imol(char *fileName, struct igre_model_listing *
 
 	for(uint64_t i = 0; i < modelListing->no_models; i++) { // For each of the models in the listing
 		if(!(fwrite(&modelListing->models[i].name_size, sizeof(uint64_t), 1, f) && // Write the size of the model name
-			 fwrite(&modelListing->models[i].no_polygons, sizeof(uint64_t), 1, f))) { // Write the number of polygons in the model
+		     fwrite(&modelListing->models[i].no_polygons, sizeof(uint64_t), 1, f))) { // Write the number of polygons in the model
 			fclose(f);
 			return IGRE_FILE_WRITE_ERROR;
 		}
