@@ -26,7 +26,7 @@ struct igre_model_listing { // Struct for objects that are to be read into from 
 
 	struct igre_model {
 		uint64_t name_size, // Size of model name in characters (including null terminator)
-				 no_polygons; // Amount of polygons in model
+			 no_polygons; // Amount of polygons in model
 
 		uint8_t *name; // Name of model
 
