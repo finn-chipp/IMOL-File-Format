@@ -1,5 +1,5 @@
 # IMOL-File-Format
-IMOL (.ioml) is a file format for 3D models.
+IMOL (.imol) is a file format for 3D models.
 
 IMOL (IGRE Model-Object Listing) is a file format designed to store a listing of 3D models, originally designed for usage with IGRE.
 IGRE (Ideal Graphics Rendering Engine) is a project which I am currently working on for my Extended Project Qualification at college.
